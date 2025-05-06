@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Events | Event Hub</title>
+    <link rel="stylesheet" href="find-event.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">EventHub</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="find-event.html">Find Events</a>
+                <a href="contacts.html">Contact</a>
+                <a href="loginform.html">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Events Near You</h1>
+            <form id="event-search-form" class="search-bar">
+                <input type="text" id="category-search" placeholder="Search by category...">
+                <input type="text" id="location-search" placeholder="Search by location...">
+                <input type="date" id="date-search" placeholder="Date">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filters">
+        <h2>Filter Events</h2>
+        <div class="filter-container">
+            <button class="filter-btn" onclick="filterEvents('all')">All Events</button>
+            <button class="filter-btn" onclick="filterEvents('music')">Music</button>
+            <button class="filter-btn" onclick="filterEvents('sports')">Sports</button>
+            <button class="filter-btn" onclick="filterEvents('tech')">Tech</button>
+            <button class="filter-btn" onclick="filterEvents('food')">Food</button>
+            <button class="filter-btn" onclick="filterEvents('art')">Art Expo</button>
+            <button class="filter-btn" onclick="filterEvents('startup')">Startup</button>
+
+            <button class="filter-btn" onclick="filterEvents('upcoming')">Upcoming</button>
+        </div>
+    </section>
+
+    <!-- Event Listings -->
+    <section class="event-listings">
+        <h2 style="color: white;">Available Events</h2>
+        <div class="event-grid">
+            <!-- Event Card Example -->
+            <div class="event-card" data-category="music" data-date="2024-11-01">
+                <img src="music1.jpg.jpeg" alt="Music Event">
+                <div class="event-info">
+                    <h3>Live Concert</h3>
+                    <p>Date: November 01, 2024</p>
+                    <p>Location: MALVIYA NAGAR JAIPUR</p>
+                    <p>Artist: Atif Aslam</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="tech" data-date="2024-11-05">
+                <img src="tech1.jpg.jpeg" alt="Tech Event">
+                <div class="event-info">
+                    <h3> Future Technology</h3>
+                    <p>Date: November 05, 2024</p>
+                    <p>Location: :TRITON HALL ,PRATAP NAGAR</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+ 
+            <div class="event-card" data-category="sports" data-date="2024-11-07">
+                <img src="sports1.jpg.jpeg" alt="Sports Event">
+                <div class="event-info">
+                    <h3>Fun Run Marathon</h3>
+                    <p>Date: November 07, 2024</p>
+                    <p>Location: NEHRU STADIUM</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="art" data-date="2024-11-10">
+                <img src="art1.jpg" alt="Art Event">
+                <div class="event-info">
+                    <h3>Art Expo</h3>
+                    <p>Date: November 12, 2024</p>
+                    <p>Location:Birla Auditorium </p>
+                    <p>Price: $80</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="food" data-date="2024-11-12">
+                <img src="food1.jpg" alt="Food Event">
+                <div class="event-info">
+                    <h3>Have Food</h3>
+                    <p>Date: November 12, 2024</p>
+                    <p>Location: All in one Restaurent</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="startup" data-date="2024-11-14">
+                <img src="startup1.jpg" alt="startup Event">
+                <div class="event-info">
+                    <h3>Start up India</h3>
+                    <p>Date: November 14, 2024</p>
+                    <p>Location: Ranasanga Marg</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="music" data-date="2024-11-17">
+                <img src="music2.jpg.jpeg" alt="Music Event">
+                <div class="event-info">
+                    <h3>Live Concert</h3>
+                    <p>Date: November 17, 2024</p>
+                    <p>Location: City Arena</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+ 
+            <div class="event-card" data-category="sports" data-date="2024-11-19">
+                <img src="sports2.jpg.jpeg" alt="Sports  Event">
+                <div class="event-info">
+                    <h3>Run & Run</h3>
+                    <p>Date: November 19, 2024</p>
+                    <p>Location: City Nagpur</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+ 
+            <div class="event-card" data-category="tech" data-date="2024-11-22">
+                <img src="Tech Fest Flyer Template PSD.jpeg" alt="Tech Event">
+                <div class="event-info">
+                    <h3>Techo Fun</h3>
+                    <p>Date: November 22, 2024</p>
+                    <p>Location: City Jabalpur</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="sports" data-date="2024-11-25">
+                <img src="sports3.jpg.jpeg" alt="sports Event">
+                <div class="event-info">
+                    <h3>Charity Marathon</h3>
+                    <p>Date: November 25, 2024</p>
+                    <p>Location: WTP</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="music" data-date="2024-11-27">
+                <img src="music3.jpg.jpeg" alt="Music Event">
+                <div class="event-info">
+                    <h3>Live Concert</h3>
+                    <p>Date: November 27, 2024</p>
+                    <p>Location: MUMBAI</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="startup" data-date="2024-11-29">
+                <img src="startup2.jpg" alt="startup Event">
+                <div class="event-info">
+                    <h3>Up and High</h3>
+                    <p>Date: November 29, 2024</p>
+                    <p>Location: JECC Sitapura</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="food" data-date="2024-12-02">
+                <img src="food2.jpg" alt="Food Event">
+                <div class="event-info">
+                    <h3>Foodies</h3>
+                    <p>Date: December 12, 2024</p>
+                    <p>Location: MANSAROVAR</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="art" data-date="2024-12-06">
+                <img src="art2.jpg" alt="Art Event">
+                <div class="event-info">
+                    <h3>Art and Craft</h3>
+                    <p>Date: December 06, 2024</p>
+                    <p>Location: City Palace</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="asports" data-date="2024-12-09">
+                <img src="sports4.jpg.jpeg" alt="sports Event">
+                <div class="event-info">
+                    <h3>Live Sports</h3>
+                    <p>Date: December 09, 2024</p>
+                    <p>Location: BIDANI,JAIPUR</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+            <div class="event-card" data-category="startup" data-date="2024-12-12">
+                <img src="music4.jpg.jpeg" alt="startup Event">
+                <div class="event-info">
+                    <h3>Live Concert</h3>
+                    <p>Date: December 12, 2024</p>
+                    <p>Location: The Lalit</p>
+                    <p>Price: $50</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EventHub. All rights reserved.</p>
+    </footer>
+
+    <script src="find-event.js"></script>
+</body>
+</html>
